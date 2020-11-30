@@ -152,6 +152,7 @@
 /* / end eleventh example */
 
 /* twelfth example-thirteenth example */
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -180,4 +181,75 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+}
+/* 12 */
+.ex-12-button:hover .ex-12-top-white{
+    animation: alterntop 1s  2 alternate;
+}
+
+@keyframes alterntop{
+    0% {
+        left: 10%;
+    }
+    50% {
+        left: calc(100% - 60px);
+    }
+    100% {
+        left: 10%;
+    }
+}
+
+
+.ex-12-button:hover .ex-12-bottom-white{
+    animation: alternbottom 1s 2 alternate;
+}
+@keyframes alternbottom {
+    0% {
+        right: 20%;
+    }
+
+    60% {
+        right: calc(100% - 60px);
+    }
+
+    100% {
+        right: 20%;
+    }
+}
+/* ///////// 12 */
+
+
+/* 13 */
+.ex-13-button:hover .ex-13-top-white{
+    animation: alterntop 1s  2 alternate;
+}
+
+@keyframes alterntop{
+    0% {
+        left: 10%;
+    }
+    50% {
+        left: calc(100% - 60px);
+    }
+    100% {
+        left: 10%;
+    }
+}
+
+
+.ex-13-button:hover .ex-13-bottom-white{
+    animation: alternbottom 1s 2 alternate;
+}
+@keyframes alternbottom {
+    0% {
+        right: 20%;
+    }
+
+    60% {
+        right: calc(100% - 60px);
+    }
+
+    100% {
+        right: 20%;
+    }
 }
