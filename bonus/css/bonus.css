@@ -45,17 +45,14 @@ h1{
     position: absolute;
     width: 100px;
     height: 100px;
-    border: 1px solid blue;
+    border: 1px solid orange;
 }
 
 .faccia.avanti{
     transform: translate3d(-50px, -50px, -50px);
     background-color: green;
 }
-.faccia.dx{
-    transform: translate3d(50px, 50px, 50px);
-    background-color: red;
-}
+
 .faccia.back{
     transform: translateY(-50px) rotateY(90deg);
     background-color: red;
@@ -64,5 +61,11 @@ h1{
     transform: translatex(-50px) rotatex(90deg);
     background-color: pink;
 }
-
-
+.faccia.top{
+    transform: translate3d(-50px, -50px, 50px);
+    background-color: black;
+}
+.faccia.dx{
+transform: translate3d(-100px, -50px, 0deg)  ;
+background-color: orange;
+}
