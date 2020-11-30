@@ -1,0 +1,143 @@
+/* first example */
+.ex-1-square {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    transition: 3s;
+}
+
+.ex-1-square:hover {
+    background-color: red;
+}
+
+/* /end first example */
+
+
+/* second example */
+.ex-2-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: 2.5s; 
+}
+
+.ex-2-square:active{
+    width: 100%;
+}
+/* /end second example */
+
+/* third example */
+.ex-3-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: 0.5s;
+}
+
+.ex-3-square:hover{
+    border-radius: 50%;
+}
+/* /end third example */
+
+/* fourth-example */
+.ex-4-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: 1.5s;
+}
+
+.ex-4-square:hover{
+    background: transparent;
+}
+/* /end fourth example */
+
+/* fifth example */
+.ex-5-square {
+    margin: 20px;
+    width: 60px;
+    height: 60px;
+    background: red;
+    transition: 0.7s;
+}
+
+.ex-5-square:hover{
+    width: 120px;
+    height: 120px;
+    margin: 0;
+}
+
+.ex-5-square:active{
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+}
+/* /end fith example */
+
+
+/* sixth example */
+.ex-6-img, .ex-7-img, .ex-8-img {
+    width: 500px;
+    transition: 1s;
+}
+.ex-6-img:hover {
+    filter: grayscale(100%);
+}
+/* /end sixth example */
+
+/* /seventh exaple */
+.ex-7-img {
+    width: 500px;
+    transition: 1s;
+    transform: scale(3s);
+}
+
+
+
+
+
+
+
+
+
+
+
+.ex-9-img {
+    margin: 50px 100px;
+    width: 400px;
+}
+.ex-10-icon {
+    font-size: 60px;
+}
+.ex-11-icon {
+    font-size: 60px;
+}
+.ex-12-button, .ex-13-button {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 70px;
+    text-transform: uppercase;
+    border: 3px solid #1b3c59;
+    color: #1b3c59;
+    font-size: 20px;
+    line-height: 70px;
+    text-align: center;
+    text-decoration: none;
+}
+.ex-12-top-white, .ex-13-top-white {
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+.ex-12-bottom-white, .ex-13-bottom-white {
+    position: absolute;
+    bottom: -10px;
+    right: 20%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
