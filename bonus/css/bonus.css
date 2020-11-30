@@ -7,7 +7,7 @@
 .container{
     width: 600px;
     height: 600px;
-    margin: auto;
+    margin: 200px auto;
     border: 1px solid black;
 }
 h1{
@@ -19,9 +19,9 @@ h1{
     position: relative;
     transform-style: preserve-3d;
     animation: cube3d 10s linear;
-    width: 600px;
-    height: 600px;
-    background-color: red;
+    width: 300px;
+    height: 300px;
+    border: black;
 }
 
 @keyframes cube3d {
@@ -33,14 +33,36 @@ h1{
     50% {
         transform: rotate3d(2, -1, -1, -0.2turn);
     }
-    100% {
+    80% {
         transform: rotate3d(0, 1, 0.5, 3.142rad);
+    }
+    100% {
+        transform: rotate3d(0,0,0,0);
     }
 }
 
 .faccia{
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 100px;
+    height: 100px;
     border: 1px solid blue;
 }
+
+.faccia.avanti{
+    transform: translate3d(-50px, -50px, -50px);
+    background-color: green;
+}
+.faccia.dx{
+    transform: translate3d(50px, 50px, 50px);
+    background-color: red;
+}
+.faccia.back{
+    transform: translateY(-50px) rotateY(90deg);
+    background-color: red;
+}
+.faccia.sx{
+    transform: translatex(-50px) rotatex(90deg);
+    background-color: pink;
+}
+
+
