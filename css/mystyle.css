@@ -91,27 +91,67 @@
     transition: 1s;
     transform: scale(3s);
 }
+/* in pausa */
 
 
+/* eighth example */
+.ex-8-img {
+    width: 500px;
+    transition: 2s;
+}
+.ex-8-img:hover {
+    filter: grayscale (50%);
+    filter: sepia(70%);
+    border-radius: 30px;
+}
+/* /end eighth example */
 
-
-
-
-
-
-
-
-
+/* ninth example */
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: 2s;
 }
+.ex-9-img:hover {
+    width: 600px;
+    margin: 0;
+    filter: grayscale (50%);
+    filter: sepia(0.8);
+    border-radius: 10%;
+}
+/* /end ninth example */
+
+/* tenth example */
 .ex-10-icon {
     font-size: 60px;
+    animation: mycircle 0.6s linear infinite;
 }
+@keyframes mycircle {
+    from {
+    transform: rotate(360deg);
+    }
+    to {
+    transform: rotate(0deg);
+    }
+}
+/* /end tewnth example */
+
+/* eleventh example */
 .ex-11-icon {
     font-size: 60px;
 }
+
+.ex-11-icon:hover{
+    animation: mysecondcircle 0.5s 2 alternate;
+}
+
+@keyframes mysecondcircle {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(290deg);}
+}
+/* / end eleventh example */
+
+/* twelfth example-thirteenth example */
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
