@@ -88,10 +88,26 @@
 /* /seventh exaple */
 .ex-7-img {
     width: 500px;
-    transition: 1s;
-    transform: scale(3s);
 }
-/* in pausa */
+
+.ex-7-img:hover{
+    animation: pippo 2s;
+}
+@keyframes pippo{
+    0% {
+        filter: grayscale(0) sepia(25%);
+    }
+    25%{
+        filter: grayscale(25%);
+    }
+    75%{
+        filter: grayscale(50%) sepia(50%);
+    }
+    100%{
+        filter: grayscale(100%) sepia(100%);
+    }
+}
+
 
 
 /* eighth example */
@@ -173,6 +189,7 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+    /* border: 1px solid black; */
 }
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
@@ -181,6 +198,7 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+    /* border: 1px solid black; */
 }
 /* 12 */
 .ex-12-button:hover .ex-12-top-white{
@@ -221,35 +239,55 @@
 
 /* 13 */
 .ex-13-button:hover .ex-13-top-white{
-    animation: alterntop 1s  2 alternate;
+    animation: infinitetop 3s linear infinite;
 }
 
-@keyframes alterntop{
+@keyframes infinitetop{
     0% {
         left: 10%;
+        top: -10px;
+    }
+    25% {
+        left: calc(100% - 60px);
+        top: -10px;
     }
     50% {
-        left: calc(100% - 60px);
+        left: calc(100% - 30px);
+        top: 100%;
     }
-    100% {
-        left: 10%;
+    75%{
+        top: calc(100% - 20px);
+        left: -10px;
+    }
+    100%{
+        top: 0;
+        left: 0;
     }
 }
 
 
 .ex-13-button:hover .ex-13-bottom-white{
-    animation: alternbottom 1s 2 alternate;
+    animation: infinitebottom 3s linear infinite;
 }
-@keyframes alternbottom {
+@keyframes infinitebottom{
     0% {
-        right: 20%;
+        right: 10%;
+        bottom: -10px;
     }
-
-    60% {
+    25% {
         right: calc(100% - 60px);
+        bottom: -10px;
     }
-
-    100% {
-        right: 20%;
+    50% {
+        right: calc(100% - 30px);
+        bottom: 100%;
+    }
+    75%{
+        bottom: calc(100% - 20px);
+        right: -10px;
+    }
+    100%{
+        bottom: 0;
+        right: 0;
     }
 }
