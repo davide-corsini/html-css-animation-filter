@@ -1,33 +1,48 @@
+/* GENERAL RULES */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.container{
-    max-width: 1200px;
-    margin: 100px auto;
-    border: 1px solid black;
-    padding: 10%;
-}
-h1{
-    text-align: center;
+body{
+    background-image: url('https://images.everyeye.it/img-articoli/spazio-nono-pianeta-del-sistema-solare-non-piu-miraggio-v14-38900.jpg');
 }
 
 .dblock{
     display: inline-block;
 }
 
-
 .container-cubo{
     position: relative;
     transform-style: preserve-3d;
-    animation: cube3d 10s linear;
-    width: 300px;
+    animation: cube3d 15s linear infinite;
+    width: calc(100% / 3 - 50px);
+    float: left;
     height: 300px;
-    border: black;
+    margin: 10px 25px;
 }
 
+.faccia{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 1px solid orange;
+    background-color: rgba(0, 215, 243, 0.411);
+}
+/* conteiner top */
+.container{
+    max-width: 1200px;
+    margin: 200px auto;
+    padding: 5%;
+}
+/* title */
+h1{
+    text-align: center;
+    color: white;
+}
+
+/* animazione fissa  */
 @keyframes cube3d {
     0% {
         transform: rotate3d(0,0,0,0);
@@ -41,47 +56,222 @@ h1{
         transform: rotate3d(0, 1, 0.5, 3.142rad);
     }
     100% {
-        transform: rotate3d(0,0,0,0);
+        transform: rotate3d(5,3,0.8,360deg);
     }
 }
-
-.faccia{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border: 1px solid orange;
-    background-color: aqua;
-}
+/* position face cube */
 
 .faccia.back{
     transform: translate3d(-50px, -50px, -50px);
-    background-color: green;
+    background-color: rgba(12, 250, 12, 0.253);
 }
 
 .faccia.dx{
     transform: translateY(-50px) rotateY(90deg);
-    background-color: red;
+    background-color: rgba(240, 101, 101, 0.459);
 }
 .faccia.bottom{
     transform: translatex(-50px) rotatex(90deg);
-    background-color: pink;
+    background-color: rgba(255, 185, 197, 0.692);
 }
 .faccia.avanti{
     transform: translate3d(-50px, -50px, 50px);
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.109);
 }
 
 .faccia.top{
     transform: translateY(-100px) translateX(-50px) rotateX(90deg);
-    background-color: orange;
+    background-color: rgba(235, 185, 20, 0.596);
 }
-
-/* .faccia.sx{
-    transform: translateY(-50px) rotateY(90deg);
-    background-color: red;
-} */
 
 .faccia.sx{
     transform: translateX(-100px) translateY(-50px) rotateY(90deg);
     border: 3px solid brown;
 }
+/* /end position face-cube */
+
+
+/* big cube */
+.faccia.big{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid orange;
+    background-color: aqua;
+}
+
+
+.faccia.back.big{
+    transform: translate3d(-50px, -50px, -50px);
+    background-color: rgba(14, 211, 162, 0.164);
+}
+
+.faccia.dx.big{
+    transform: translateY(-50px) rotateY(90deg);
+    background-color: rgba(217, 0, 255, 0.575);
+}
+.faccia.bottom.big{
+    transform: translatex(-50px) rotatex(90deg);
+    background-color: rgba(255, 192, 203, 0.466);
+}
+.faccia.avanti.big{
+    transform: translate3d(-50px, -50px, 50px);
+    background-color: rgba(0, 0, 0, 0.027);
+}
+
+.faccia.top.big{
+    transform: translateY(-100px) translateX(-50px) rotateX(90deg);
+    background-color: rgba(255, 251, 0, 0.425);
+}
+/* /big cube */
+
+/* small ball */
+.faccia.small{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid orange;
+    border-radius: 50%;
+    background-color: aqua;
+}
+
+
+.faccia.back.small{
+    transform: translate3d(-50px, -50px, -50px);
+    background-color: green;
+}
+
+.faccia.dx.small{
+    transform: translateY(-50px) rotateY(90deg);
+    background-color: red;
+}
+.faccia.bottom.small{
+    transform: translatex(-50px) rotatex(90deg);
+    background-color: pink;
+}
+.faccia.avanti.small{
+    transform: translate3d(-50px, -50px, 50px);
+    background-color: black;
+}
+
+.faccia.top.small{
+    transform: translateY(-100px) translateX(-50px) rotateX(90deg);
+    background-color: orange;
+}
+/* /end small ball */
+
+
+.faccia.back.big.gradient{
+    transform: translate3d(-50px, -50px, -50px);
+    background: linear-gradient(0deg, rgba(195, 106, 34, 0.685) 0%, rgba(253,187,45,1) 100%);
+}
+
+.faccia.dx.big.gradient{
+    transform: translateY(-50px) rotateY(90deg);
+    background: linear-gradient(0deg, rgba(53, 195, 34, 0.356) 0%, rgba(45,245,253,0.8300362381280637) 100%);
+}
+.faccia.bottom.big.gradient{
+    transform: translatex(-50px) rotatex(90deg);
+    background: linear-gradient(0deg, rgba(255, 8, 202, 0.5) 0%, rgba(253,222,45,0.5723331568955707) 100%);
+}
+.faccia.avanti.big.gradient{
+    transform: translate3d(-50px, -50px, 50px);
+    background: linear-gradient(0deg, rgba(185, 182, 0, 0.582) 0%, rgba(45,18,45,0.6395600476518732) 100%);
+}
+
+.faccia.top.big.gradient{
+    transform: translateY(-100px) translateX(-50px) rotateX(90deg);
+    background: linear-gradient(0deg, rgba(19, 7, 194, 0.76) 0%, rgba(255,243,8,1) 100%);
+}
+/* ---------------------- */
+/* special */
+/* ------------------- */
+
+
+
+/* small planet start */
+.faccia.small.planet{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 1px solid orange;
+    border-radius: 50%;
+    background-image: url('https://images.alphacoders.com/548/thumb-1920-548280.jpg');
+    background-size: cover;
+    width: 100%;
+
+}
+
+
+.faccia.back.small.planet{
+    transform: translate3d(-50px, -50px, -50px);
+    background-color: green;
+}
+
+.faccia.dx.small.planet{
+    transform: translateY(-50px) rotateY(90deg);
+    background-color: red;
+}
+.faccia.bottom.small.planet{
+    transform: translatex(-50px) rotatex(90deg);
+    background-color: pink;
+}
+.faccia.avanti.small.planet{
+    transform: translate3d(-50px, -50px, 50px);
+    background-color: black;
+}
+
+.faccia.top.small.planet{
+    transform: translateY(-100px) translateX(-50px) rotateX(90deg);
+    background-color: orange;
+}
+/* /end small planet */
+
+/* rettangolo */
+.faccia.trash{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 1px solid orange;
+    margin-left: 200px;
+    background-image: url('https://sfondo.info/i/original/c/3/2/71524.jpg');
+    background-size: cover;
+    background-repeat: repeat-x;
+    width: 100%;
+}
+
+.faccia.back{
+    transform: translate3d(-50px, -50px, -50px);
+    background-color: rgba(12, 250, 12, 0.253);
+}
+
+.faccia.dx{
+    transform: translateY(-50px) rotateY(90deg);
+    background-color: rgba(240, 101, 101, 0.459);
+}
+.faccia.bottom{
+    transform: translatex(-50px) rotatex(90deg);
+    background-color: rgba(255, 185, 197, 0.692);
+}
+.faccia.avanti{
+    transform: translate3d(-50px, -50px, 50px);
+    background-color: rgba(0, 0, 0, 0.109);
+}
+
+.faccia.top{
+    transform: translateY(-100px) translateX(-50px) rotateX(90deg);
+    background-color: rgba(235, 185, 20, 0.596);
+}
+
+/* /rettangolo end  */
+
+
+#down {
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 10px;
+}
+
